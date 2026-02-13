@@ -1,34 +1,32 @@
 const noBtn = document.getElementById("noBtn");
 
 if (noBtn) {
-  const btnRow = document.getElementById("btnRow");
+  const card = document.querySelector(".card");
 
   function moveNoButton() {
-    // Move within the card area
-    const card = btnRow.closest(".card");
     const cardRect = card.getBoundingClientRect();
-
     const btnRect = noBtn.getBoundingClientRect();
-    const padding = 16;
 
+    const padding = 12;
     const maxX = cardRect.width - btnRect.width - padding * 2;
-    const maxY = 120; // keep it around the button area
+
+    // Keep "No" near the buttons (not over the image)
+    const minY = 330;
+    const maxY = 390;
 
     const x = padding + Math.random() * Math.max(0, maxX);
-    const y = 320 + Math.random() * Math.max(0, maxY); // below image
+    const y = minY + Math.random() * (maxY - minY);
 
     noBtn.style.position = "absolute";
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
   }
 
-  // Make it dodge cursor/taps
   noBtn.addEventListener("mouseenter", moveNoButton);
   noBtn.addEventListener("touchstart", (e) => {
     e.preventDefault();
     moveNoButton();
   }, { passive: false });
 
-  // Optional: first move so it's playful immediately
   setTimeout(moveNoButton, 600);
 }
