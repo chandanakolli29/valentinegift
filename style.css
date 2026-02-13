@@ -225,6 +225,14 @@ body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   10%{ opacity:.75; }
   100%{ transform: translateY(-110vh) rotate(18deg); opacity:0; }
 }
+#noBtn{
+  position: relative;   /* visible by default */
+  z-index: 9999;        /* above everything */
+}
+.btnRow{
+  position: relative;
+}
+
 
 @media (max-width: 520px){
   .grid2{ grid-template-columns: 1fr; }
@@ -233,3 +241,4 @@ body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   .heroImg{ width: 210px; }
   .pick img{ height: 170px; }
 }
+
