@@ -4,25 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Be My Valentine 💖</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg">
 
-  <main class="card">
-    <div class="topEmoji">💘</div>
+<body class="bg">
+  <div class="hearts" aria-hidden="true">
+    <span>💖</span><span>💗</span><span>💕</span><span>💘</span><span>💞</span>
+    <span>💖</span><span>💗</span><span>💕</span><span>💘</span><span>💞</span>
+  </div>
+
+  <main class="card popIn">
+    <div class="topEmoji pulse">💘</div>
     <h1 class="title">Will you be my Valentine?</h1>
     <p class="sub">I have a tiny surprise for you ✨</p>
 
     <div class="heroImgWrap">
-      <img class="heroImg"
-        src="bunny.jpg"
-        alt="Cute couple" />
+      <img class="heroImg floating" src="bunny.jpg" alt="Cute love" />
     </div>
 
     <div class="btnRow" id="btnRow">
       <a class="btn yes" href="thanks.html">Yes 💖</a>
-
-      <!-- "No" is a button so we can move it -->
       <button class="btn no" id="noBtn" type="button">No 🙃</button>
     </div>
 
@@ -32,4 +33,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
